@@ -6,7 +6,7 @@ spec:
   hosts:
   - "feidcustexpaks001.ferguson.com"
   gateways:
-  - external-asm-gateway-dev
+  - opssre-gateway-dev/external-asm-gateway-dev
   http:
   - match:
     - uri:
