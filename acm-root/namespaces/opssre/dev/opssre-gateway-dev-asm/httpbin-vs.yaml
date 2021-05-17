@@ -17,4 +17,4 @@ spec:
     - destination:
         port:
           number: 8000
-        host: httpbin
+        host: httpbin.sample.svc.cluster.local
