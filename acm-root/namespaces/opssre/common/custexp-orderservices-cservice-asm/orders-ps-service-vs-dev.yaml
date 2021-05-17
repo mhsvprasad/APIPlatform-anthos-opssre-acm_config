@@ -12,7 +12,7 @@ spec:
   http:
   - match:
     - uri:
-        prefix: "/custexp-orderservices-cservice/orders-ps-service-dev-clusterip-svc/"
+        prefix: "/custexp-orderservices-cservice/orders-ps-service/"
     rewrite:
       uri: "/"
     route:
