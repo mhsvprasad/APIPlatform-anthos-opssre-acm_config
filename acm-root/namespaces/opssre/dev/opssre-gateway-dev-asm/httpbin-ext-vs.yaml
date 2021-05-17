@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: httpbin-vs
+  name: httpbin-ext-vs
 spec:
   hosts:
   - "feidcustexpaks001.ferguson.com"
