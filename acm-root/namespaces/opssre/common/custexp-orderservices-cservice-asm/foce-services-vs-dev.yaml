@@ -1,0 +1,23 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: foce-services-vs-dev
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-dev-clusters
+spec:
+  hosts:
+  - feidcustexpaks001.feiaz.ferguson.com
+  gateways:
+  - opssre-gateway-dev/internal-asm-gateway-dev
+  http:
+  - match:
+    - uri:
+        prefix: "/custexp-orderservices-cservice/foce-services-clusterip-svc/"
+    rewrite:
+      uri: "/"
+    route:
+      - destination:
+          host: foce-services-clusterip-svc.custexp-orderservices-cservice.svc.cluster.local
+          port:
+            number: 80
+
