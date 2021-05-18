@@ -12,9 +12,9 @@ spec:
   http:
   - match:
     - uri:
-        prefix: "/custexp-orderservices-cservice/foce-services/om/cs/"
+        prefix: "/custexp-orderservices-cservice/foce-services/"
     rewrite:
-      uri: "/om/cs/"
+      uri: "/"
     route:
       - destination:
           host: foce-services-clusterip-svc.custexp-orderservices-cservice.svc.cluster.local
