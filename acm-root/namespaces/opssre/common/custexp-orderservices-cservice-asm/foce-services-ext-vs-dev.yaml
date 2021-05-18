@@ -14,7 +14,7 @@ spec:
     - uri:
         prefix: "/custexp-orderservices-cservice/foce-services/om/cs/"
     rewrite:
-      uri: "/"
+      uri: "/om/cs/"
     route:
       - destination:
           host: foce-services-clusterip-svc.custexp-orderservices-cservice.svc.cluster.local
