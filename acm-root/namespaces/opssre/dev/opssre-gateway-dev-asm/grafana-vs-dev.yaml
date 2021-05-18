@@ -8,7 +8,7 @@ spec:
   hosts:
   - "feidcustexpaks001.feiaz.ferguson.com"
   gateways:
-  - opssre-gateway-dev/internal-asm-gateway-dev
+  - opssre-gateway-dev/internal-asm-gateway-dev-m
   http:
   - match:
     - uri:
