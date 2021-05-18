@@ -18,7 +18,7 @@ spec:
 
   - port:
       number: 8443
-      name: https1
+      name: httpsg
       protocol: HTTPS
     tls:
       mode: SIMPLE
