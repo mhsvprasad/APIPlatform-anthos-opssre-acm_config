@@ -7,12 +7,9 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: 8443
+      number: 8080
       name: httpsg
-      protocol: HTTPS
-    tls:
-      mode: SIMPLE
-      credentialName: internal-gw-tls-credential-m
+      protocol: HTTP
     hosts:
     - feidcustexpaks001.feiaz.ferguson.com
 
