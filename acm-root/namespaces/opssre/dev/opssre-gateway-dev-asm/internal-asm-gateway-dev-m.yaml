@@ -1,17 +1,17 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: internal-asm-gateway-dev
+  name: internal-asm-gateway-dev-m
 spec:
   selector:
     istio: ingressgateway
   servers:
   - port:
-      number: 443
-      name: https
+      number: 8443
+      name: httpsg
       protocol: HTTPS
     tls:
-      mode: MUTUAL
+      mode: SIMPLE
       credentialName: internal-gw-tls-credential
     hosts:
     - feidcustexpaks001.feiaz.ferguson.com
