@@ -14,5 +14,5 @@ spec:
       mode: SIMPLE
       credentialName: internal-gw-tls-credential-m
     hosts:
-    - feidcustexpaks001.feiaz.ferguson.com
+    - feidcustexpaks002.feiaz.ferguson.com
 
