@@ -16,12 +16,12 @@ spec:
     hosts:
     - feidcustexpaks001.feiaz.ferguson.com
 
-  - port:
-      number: 8443
-      name: httpsg
-      protocol: HTTPS
-    tls:
-      mode: SIMPLE
-      credentialName: internal-gw-tls-credential
-    hosts:
-    - feidcustexpaks001.feiaz.ferguson.com
+#  - port:
+#      number: 8443
+#      name: httpsg
+#      protocol: HTTPS
+#    tls:
+#      mode: SIMPLE
+#      credentialName: internal-gw-tls-credential
+#    hosts:
+#    - feidcustexpaks001.feiaz.ferguson.com
