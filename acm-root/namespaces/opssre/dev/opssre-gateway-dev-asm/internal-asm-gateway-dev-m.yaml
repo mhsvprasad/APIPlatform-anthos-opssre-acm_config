@@ -12,7 +12,7 @@ spec:
       protocol: HTTPS
     tls:
       mode: SIMPLE
-      credentialName: internal-gw-tls-credential
+      credentialName: internal-gw-tls-credential-m
     hosts:
     - feidcustexpaks001.feiaz.ferguson.com
 
