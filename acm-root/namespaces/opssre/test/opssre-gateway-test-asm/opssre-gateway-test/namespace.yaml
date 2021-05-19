@@ -1,0 +1,10 @@
+# creates namespace named "opssre-gateway-dev"
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: opssre-gateway-dev
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-test-clusters
+  labels:
+    istio-injection: enabled
+    environment-type: test
