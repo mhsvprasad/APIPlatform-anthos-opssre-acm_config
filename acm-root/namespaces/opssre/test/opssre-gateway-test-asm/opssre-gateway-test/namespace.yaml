@@ -1,8 +1,8 @@
-# creates namespace named "opssre-gateway-dev"
+# creates namespace named "opssre-gateway-test"
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: opssre-gateway-dev
+  name: opssre-gateway-test
   annotations:
     configmanagement.gke.io/cluster-selector: opssre-test-clusters
   labels:
