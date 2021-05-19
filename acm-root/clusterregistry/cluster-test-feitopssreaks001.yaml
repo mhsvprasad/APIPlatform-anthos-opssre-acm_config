@@ -1,9 +1,0 @@
-kind: Cluster
-apiVersion: clusterregistry.k8s.io/v1alpha1
-metadata:
-  name: feitopssreaks001
-  labels:
-    name: feitopssreaks001
-    owned-by-businessunit: opssre
-    environment-type: test
-
