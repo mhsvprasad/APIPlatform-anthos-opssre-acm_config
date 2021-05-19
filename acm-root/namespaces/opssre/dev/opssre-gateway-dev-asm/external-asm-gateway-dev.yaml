@@ -13,7 +13,6 @@ spec:
     tls:
       mode: MUTUAL
       credentialName: external-gw-tls-credential
-      verifyCertificateHash: 
-      - "E1:11:A9:13:71:5C:81:8F:DE:A5:2F:F6:45:44:13:86"
+      verifyCertificateHash: [E1:11:A9:13:71:5C:81:8F:DE:A5:2F:F6:45:44:13:86]
     hosts:
     - feidcustexpaks001.ferguson.com
