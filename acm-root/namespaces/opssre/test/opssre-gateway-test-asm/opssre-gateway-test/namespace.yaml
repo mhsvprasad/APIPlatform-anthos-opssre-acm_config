@@ -1,4 +1,4 @@
-# creates namespace named "opssre-gateway-dev"
+# creates namespace named "opssre-gateway-test"
 apiVersion: v1
 kind: Namespace
 metadata:
