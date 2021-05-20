@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: grafana-vs-prod
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-prod-clusters
+spec:
+  hosts:
+  - "feipopssreaks001.feiaz.ferguson.com"
+  gateways:
+  - opssre-gateway-prod/internal-asm-gateway-prod
+  http:
+  - match:
+    - uri:
+        prefix: "/grafana/"
+    rewrite:
+      uri: "/"
+    route:
+    - destination:
+        port:
+          number: 3000
+        host: grafana.istio-system.svc.cluster.local
