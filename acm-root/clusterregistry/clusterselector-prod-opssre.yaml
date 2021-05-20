@@ -1,0 +1,10 @@
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: opssre-prod-clusters
+spec:
+  selector:
+    matchLabels:
+      owned-by-businessunit: opssre
+      environment-type: prod
+

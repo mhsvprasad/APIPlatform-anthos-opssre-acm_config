@@ -1,0 +1,10 @@
+# creates namespace named "opssre-gateway-prod"
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: opssre-gateway-prod
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-prod-clusters
+  labels:
+    istio-injection: enabled
+    environment-type: prod
