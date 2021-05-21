@@ -1,0 +1,10 @@
+# creates namespace named "opssre-orderservices-uat"
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: opssre-orderservices-uat
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-test-clusters
+  labels:
+    istio-injection: enabled
+    environment-type: test
