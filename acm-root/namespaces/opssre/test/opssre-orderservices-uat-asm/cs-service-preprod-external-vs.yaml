@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: cs-service-preprod-external-vs-test
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-test-clusters
+spec:
+  hosts:
+  - feitopssreaks001.ferguson.com
+  gateways:
+  - opssre-gateway-test/external-asm-gateway-test
+  http:
+  - match:
+    - uri:
+        prefix: "/opssre-orderservices-preprod/cs-service-preprod/"
+    rewrite:
+      uri: "/"
+    route:
+      - destination:
+          host: cs-service-preprod-clusterip-svc.opssre-orderservices-preprod.svc.cluster.local
+          port:
+            number: 80
