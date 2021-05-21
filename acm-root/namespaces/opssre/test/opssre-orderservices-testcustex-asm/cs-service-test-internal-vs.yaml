@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: cs-service-test-internal-vs-test
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-test-clusters
+spec:
+  hosts:
+  - feitopssreaks001.feiaz.ferguson.com
+  gateways:
+  - opssre-gateway-test/internal-asm-gateway-test
+  http:
+  - match:
+    - uri:
+        prefix: "/opssre-orderservices-testcustex/foce-services/"
+    rewrite:
+      uri: "/"
+    route:
+      - destination:
+          host: cs-service-test-clusterip-svc.opssre-orderservices-testcustex.svc.cluster.local
+          port:
+            number: 80
