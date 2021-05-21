@@ -1,0 +1,10 @@
+# creates namespace named "opssre-orderservices-preprod"
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: opssre-orderservices-preprod
+  annotations:
+    configmanagement.gke.io/cluster-selector: opssre-test-clusters
+  labels:
+    istio-injection: enabled
+    environment-type: test
