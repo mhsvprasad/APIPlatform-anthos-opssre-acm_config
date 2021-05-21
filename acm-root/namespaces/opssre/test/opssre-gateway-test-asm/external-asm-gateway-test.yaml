@@ -11,7 +11,9 @@ spec:
       name: https
       protocol: HTTPS
     tls:
-      mode: SIMPLE
-      credentialName: external-gw-tls-credential
+      mode: MUTUAL
+      credentialName: external-gw-tls-credential-completechain
+      caCertificates: external-gw-tls-credential-completechain-cacert
+      verifyCertificateHash: [F9:25:84:E3:0A:EE:22:35:81:91:3A:E3:E8:9B:09:B8:92:59:69:FD:C8:F0:71:D8:53:65:E2:AE:E2:F5:D3:24]
     hosts:
     - feitopssreaks001.ferguson.com
