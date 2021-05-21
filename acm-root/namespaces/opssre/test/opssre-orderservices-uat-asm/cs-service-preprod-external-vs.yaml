@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: cs-service-preprod-external-vs-test
+  name: cs-service-uat-external-vs-test
   annotations:
     configmanagement.gke.io/cluster-selector: opssre-test-clusters
 spec:
@@ -12,11 +12,11 @@ spec:
   http:
   - match:
     - uri:
-        prefix: "/opssre-orderservices-preprod/cs-service-preprod/"
+        prefix: "/opssre-orderservices-uat/cs-service-uat/"
     rewrite:
       uri: "/"
     route:
       - destination:
-          host: cs-service-preprod-clusterip-svc.opssre-orderservices-preprod.svc.cluster.local
+          host: cs-service-uat-clusterip-svc.opssre-orderservices-uat.svc.cluster.local
           port:
             number: 80
