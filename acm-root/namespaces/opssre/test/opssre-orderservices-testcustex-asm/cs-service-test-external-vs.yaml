@@ -1,14 +1,14 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: cs-service-test-internal-vs-test
+  name: cs-service-test-external-vs-test
   annotations:
     configmanagement.gke.io/cluster-selector: opssre-test-clusters
 spec:
   hosts:
-  - feitopssreaks001.feiaz.ferguson.com
+  - feitopssreaks001.ferguson.com
   gateways:
-  - opssre-gateway-test/internal-asm-gateway-test
+  - opssre-gateway-test/external-asm-gateway-test
   http:
   - match:
     - uri:
