@@ -11,7 +11,7 @@ spec:
       name: https
       protocol: HTTPS
     tls:
-      mode: MUTUAL
+      mode: SIMPLE
       credentialName: internal-gw-tls-credential
     hosts:
     - feitopssreaks001.feiaz.ferguson.com
