@@ -11,8 +11,10 @@ spec:
       name: https
       protocol: HTTPS
     tls:
-      mode: SIMPLE
-      credentialName: internal-gw-tls-credential
+      mode: MUTUAL
+      credentialName: internal-gw-tls-credential-completechain
+      caCertificates: internal-gw-tls-credential-completechain-cacert
+      verifyCertificateHash: [34:D1:0E:96:7B:4C:46:BE:3F:AA:66:B7:46:DD:CF:95:50:16:66:B5:F2:75:86:97:2C:79:1E:5D:F2:4F:AC:21]
     hosts:
     - feitopssreaks001.feiaz.ferguson.com
 
